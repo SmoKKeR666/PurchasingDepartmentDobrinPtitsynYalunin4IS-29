@@ -1,0 +1,46 @@
+﻿<Page x:Class="PurchasingDepartmentDobrinPtitsynYalunin4IS_29.View.Pages.ProfilePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PurchasingDepartmentDobrinPtitsynYalunin4IS_29.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="650" d:DesignWidth="980"
+      Title="ProfilePage">
+
+    <Grid Name="ProfileGrid" Margin="50">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="70" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Профиль" Grid.ColumnSpan="2"/>
+
+        <Image Name="PrfileImg" Grid.Row="2" Source="/Resources/Images/icons8-тестовый-аккаунт-96.png" Width="200" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Button Name="ProfileBtn" Grid.Row="2" Content="добавить картинку" Grid.ColumnSpan="2" Grid.RowSpan="2" Width="180" Height="60" GotFocus="ProfileBtn_GotFocus" LostFocus="ProfileBtn_LostFocus" Visibility="Collapsed" Click="ProfileBtn_Click"/>
+
+        <TextBlock Text="ФИО пользователя: " Grid.Row="5"/>
+        <TextBlock Text="Логин: " Grid.Row="7"/>
+        <TextBlock Text="Пароль: " Grid.Row="9"/>
+
+        <TextBox Name="FullnameTb" Text="{Binding FullName}" Grid.Row="5" Grid.Column="1"/>
+        <TextBox Name="LoginTb" Grid.Row="7" Text="{Binding Login}" Grid.Column="1"/>
+        <TextBox Name="PasswordTb" Grid.Row="9" Text="{Binding Password}" Grid.Column="1"/>
+
+        <Button Name="SaveChangesBtn" Grid.Row="11" Grid.ColumnSpan="2" Content="Сохранить изменения" Width="400" Click="SaveChangesBtn_Click"/>
+    </Grid>
+</Page>

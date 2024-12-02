@@ -1,0 +1,48 @@
+﻿<Window x:Class="PurchasingDepartmentDobrinPtitsynYalunin4IS_29.View.Windows.AdministrarorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PurchasingDepartmentDobrinPtitsynYalunin4IS_29.View.Windows"
+        mc:Ignorable="d"
+        Title="Окно администратора" Height="500" Width="600" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Icon="/Resources/Images/icons8-console-100.png">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="70" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="Добавление пользователя"/>
+
+        <TextBlock Grid.Row="2" Text="Логин: "/>
+        <TextBox Name="LoginTxb" Grid.Row="2" Grid.Column="2"/>
+
+        <TextBlock Grid.Row="4" Text="Пароль: "/>
+        <TextBox Name="PasswordTxb" Grid.Row="4" Grid.Column="2"/>
+
+        <TextBlock Grid.Row="6" Text="ФИО: "/>
+        <TextBox Name="FullnameTxb" Grid.Row="6" Grid.Column="2"/>
+
+        <TextBlock Grid.Row="8" Text="Роль"/>
+        <ComboBox Name="RoleCmb" Grid.Row="8" Grid.Column="2"/>
+
+        <StackPanel Grid.Row="10" Grid.ColumnSpan="2" Orientation="Horizontal">
+            <Button Name="CloseBtn" Content="Закрыть окно" Click="CloseBtn_Click" Width="180"/>
+            <Separator Height="0" Width="40"/>
+            <Button Name="AddUserBtn" Content="Добавить пользователя" Click="AddUserBtn_Click" Width="300"/>
+        </StackPanel>
+    </Grid>
+</Window>

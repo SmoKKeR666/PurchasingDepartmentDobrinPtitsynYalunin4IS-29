@@ -1,0 +1,28 @@
+﻿<Page x:Class="PurchasingDepartmentDobrinPtitsynYalunin4IS_29.View.Pages.ViewProductsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PurchasingDepartmentDobrinPtitsynYalunin4IS_29.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="980"
+      Title="ViewProductsPage">
+
+    <Grid>
+        <DataGrid Grid.Row="7" Grid.ColumnSpan="3" Name="DataGr" Width="auto" AutoGenerateColumns="False" HorizontalAlignment="Left"
+                  Loaded="DataGr_Loaded">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Наименование товара" Width="auto" 
+                                    Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Категория товара" Width="auto" 
+                                    Binding="{Binding Category.Name}"/>
+                <DataGridTextColumn Header="Цена товара" Width="auto"
+                                    Binding="{Binding Price}"/>
+                <DataGridTextColumn Header="Количество" Width="auto"
+                                    Binding="{Binding Quantity}"/>
+                <DataGridTextColumn Header="Описание товара" Width="1*" 
+                                    Binding="{Binding Description}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>
