@@ -48,6 +48,6 @@
         <ComboBox Name="UnitOfMeasureCmb" Grid.Column="2" Grid.Row="10"/>
         <DatePicker Name="DateDeliveryDp" Grid.Column="2" Grid.Row="12"/>
         
-        <Button Name="OrderProductBtn" Content="Заказать" Grid.Row="14" Grid.Column="2" Click="OrderProductBtn_Click"/>
+        <Button Name="OrderProductBtn" Content="Заказать" Width="350" Grid.Row="14" Grid.Column="2" Click="OrderProductBtn_Click"/>
     </Grid>
 </Page>

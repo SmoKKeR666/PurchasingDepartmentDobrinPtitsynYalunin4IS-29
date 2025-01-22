@@ -26,24 +26,32 @@ namespace PurchasingDepartmentDobrinPtitsynYalunin4IS_29.View.Windows
 
         private void EnterBtn_Click(object sender, RoutedEventArgs e)
         {
-            App.currentUser = App.context.User.FirstOrDefault(user => user.Login ==
+            try
+            {
+                App.currentUser = App.context.User.FirstOrDefault(user => user.Login ==
                 LoginTb.Text && user.Password == PasswordPb.Password);
-            if (App.currentUser.IdRole == 2)
-            {
-                AdministrarorWindow administratorWindow = new AdministrarorWindow();
-                administratorWindow.Show();
-            Hide();
+                if (App.currentUser.IdRole == 2)
+                    {
+                    AdministrarorWindow administratorWindow = new AdministrarorWindow();
+                    administratorWindow.Show();
+                    Hide();
+                }
+                else if (App.currentUser.IdRole == 1)
+                {
+                    MainWindow mainWindow = new MainWindow();
+                    mainWindow.Show();
+                    Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Роль пользователя не найдена! Доступ запрещён.");
+                }
             }
-            else if (App.currentUser.IdRole == 1)
+            catch
             {
-                MainWindow mainWindow = new MainWindow();
-                mainWindow.Show();
-            Hide();
+                MessageBox.Show("Все поля должны быть заполнены!");
             }
-            else
-            {
-                MessageBox.Show("Роль пользователя не найдена! Доступ запрещён.");
-            }
+            
         }
     }
 }
